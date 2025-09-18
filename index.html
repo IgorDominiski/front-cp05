@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Melodia - Sua Música, Sua Forma</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- CSS Customizado -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/classes-portugues.css">
+</head>
+<body class="font-inter bg-black texto-branco">
+    
+    <!-- Barra de progresso do scroll -->
+    <div class="scroll-progress"></div>
+    
+    <!-- Cabeçalho/Navegação -->
+    <header class="fixo topo-0 esquerda-0 direita-0 z-50 fundo-preto/80 desfoque-fundo borda-inferior borda-cinza-800">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex itens-centro justificar-entre">
+                <!-- Logo -->
+                <div class="flex itens-centro espaco-x-3">
+                    <div class="w-8 h-8 gradiente-roxo-rosa arredondado-completo flex itens-centro justificar-centro">
+                        <i class="fas fa-music texto-branco text-sm"></i>
+                    </div>
+                    <span class="text-xl font-bold">Melodia</span>
+                </div>
+                
+                <!-- Navegação -->
+                <nav class="oculto md:flex itens-centro espaco-x-8">
+                    <a href="#hero" class="texto-cinza-300 hover:texto-branco transicao-cores">Início</a>
+                    <a href="#apresentacao" class="texto-cinza-300 hover:texto-branco transicao-cores">Sobre</a>
+                    <a href="#funcionalidades" class="texto-cinza-300 hover:texto-branco transicao-cores">Recursos</a>
+                    <a href="#contato" class="texto-cinza-300 hover:texto-branco transicao-cores">Contato</a>
+                </nav>
+                
+                <!-- Botão CTA -->
+                <button id="playButton" class="fundo-branco texto-preto font-semibold px-6 py-2 arredondado-completo hover:escala-105 transicao-transformacao">
+                    Ouvir Agora
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Seção Hero -->
+    <section id="hero" class="altura-minima-tela flex itens-centro relativo gradiente-fundo-roxo-preto">
+        <div class="container mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-12 itens-centro">
+                <!-- Conteúdo Esquerdo -->
+                <div class="texto-esquerda">
+                    <h1 class="text-6xl md:text-8xl font-bold mb-6 leading-tight scroll-fade-in">
+                        Sua música,<br>
+                        <span class="gradiente-texto-roxo-rosa scroll-gradient">
+                            sua forma
+                        </span>
+                    </h1>
+                    
+                    <p class="text-xl texto-cinza-300 mb-8 max-w-lg scroll-slide-left">
+                        Descubra milhões de músicas, crie playlists personalizadas e encontre novos artistas. 
+                        Tudo isso com qualidade de som superior.
+                    </p>
+                    
+                    <div class="flex flex-col sm:flex-row gap-4 scroll-scale">
+                        <button class="fundo-branco texto-preto font-semibold px-8 py-4 arredondado-completo hover:escala-105 transicao-transformacao flex itens-centro justificar-centro">
+                            <i class="fas fa-play mr-3"></i>
+                            Começar a ouvir
+                        </button>
+                        <button class="borda borda-cinza-600 texto-branco font-semibold px-8 py-4 arredondado-completo hover:borda-branca transicao-cores">
+                            Ver planos
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Conteúdo Direito - Cards de Música -->
+                <div class="relativo scroll-parallax">
+                    <div class="grid grid-cols-2 gap-4">
+                        <!-- Card 1 -->
+                        <div class="fundo-cinza-900 arredondado-lg p-4 hover:fundo-cinza-800 transicao-cores cursor-pointer scroll-slide-right">
+                            <div class="w-full h-32 gradiente-roxo-rosa arredondado-lg mb-3 flex itens-centro justificar-centro">
+                                <i class="fas fa-music texto-branco text-2xl"></i>
+                            </div>
+                            <h3 class="font-semibold text-sm mb-1">Playlist do Dia</h3>
+                            <p class="texto-cinza-400 text-xs">Descubra novas músicas</p>
+                        </div>
+                        
+                        <!-- Card 2 -->
+                        <div class="fundo-cinza-900 arredondado-lg p-4 hover:fundo-cinza-800 transicao-cores cursor-pointer mt-8 scroll-rotate">
+                            <div class="w-full h-32 gradiente-azul-indigo arredondado-lg mb-3 flex itens-centro justificar-centro">
+                                <i class="fas fa-heart texto-branco text-2xl"></i>
+                            </div>
+                            <h3 class="font-semibold text-sm mb-1">Favoritas</h3>
+                            <p class="texto-cinza-400 text-xs">Suas músicas preferidas</p>
+                        </div>
+                        
+                        <!-- Card 3 -->
+                        <div class="fundo-cinza-900 arredondado-lg p-4 hover:fundo-cinza-800 transicao-cores cursor-pointer -mt-4 scroll-bounce">
+                            <div class="w-full h-32 gradiente-verde-teal arredondado-lg mb-3 flex itens-centro justificar-centro">
+                                <i class="fas fa-search texto-branco text-2xl"></i>
+                            </div>
+                            <h3 class="font-semibold text-sm mb-1">Descobrir</h3>
+                            <p class="texto-cinza-400 text-xs">Novos artistas</p>
+                        </div>
+                        
+                        <!-- Card 4 -->
+                        <div class="fundo-cinza-900 arredondado-lg p-4 hover:fundo-cinza-800 transicao-cores cursor-pointer mt-4 scroll-flip">
+                            <div class="w-full h-32 gradiente-amarelo-laranja arredondado-lg mb-3 flex itens-centro justificar-centro">
+                                <svg class="texto-branco w-8 h-8" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M3 8V5H0V3h3V0h2v3h3v2H5v3zm8-4q0 .51-.07 1H19v9.667h-1.5a3.5 3.5 0 1 0 3.5 3.5V3H10.93q.07.49.07 1m8 12.667v1.5a1.5 1.5 0 1 1-1.5-1.5zM6 10.71a7 7 0 0 0 2-.965v8.422a3.5 3.5 0 1 1-3.5-3.5H6zm0 5.957H4.5a1.5 1.5 0 1 0 1.5 1.5z"/>
+                                </svg>
+                            </div>
+                            <h3 class="font-semibold text-sm mb-1">Playlists</h3>
+                            <p class="texto-cinza-400 text-xs">Crie e organize</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Player de áudio flutuante -->
+        <div id="audioPlayer" class="fixed bottom-6 right-6 bg-gray-900 arredondado-lg p-4 shadow-2xl hidden max-w-sm">
+            <div class="flex itens-centro justificar-entre mb-3">
+                <div class="flex itens-centro space-x-3">
+                    <button id="playPauseBtn" class="w-10 h-10 bg-purple-500 arredondado-completo flex itens-centro justificar-centro hover:fundo-roxo-600 transicao-cores">
+                        <i class="fas fa-play texto-branco text-sm"></i>
+                    </button>
+                    <div>
+                        <p class="font-medium text-sm">Música de Fundo</p>
+                        <p class="text-xs texto-cinza-400">Biblioteca sem copyright</p>
+                    </div>
+                </div>
+                <button id="muteBtn" class="texto-cinza-400 hover:texto-branco">
+                    <i class="fas fa-volume-up"></i>
+                </button>
+            </div>
+            <div class="w-full fundo-cinza-700 arredondado-completo h-1">
+                <div id="progressBar" class="bg-purple-400 h-1 arredondado-completo" style="width: 0%"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Apresentação -->
+    <section id="apresentacao" class="py-20 fundo-cinza-900">
+        <div class="container mx-auto px-6">
+            <div class="texto-centro mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6 texto-branco scroll-fade-in">
+                    Por que escolher o Melodia?
+                </h2>
+                <p class="text-xl texto-cinza-300 max-w-3xl mx-auto scroll-slide-left">
+                    A plataforma de música mais completa, desenvolvida para verdadeiros amantes da música
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Benefício 1 -->
+                <div class="fundo-cinza-800 arredondado-lg p-6 hover:fundo-cinza-700 transicao-tudo duracao-300 hover-lift scroll-scale group">
+                    <div class="w-12 h-12 gradiente-roxo-rosa arredondado-lg flex itens-centro justificar-centro mb-4 group-hover:escala-110 transicao-transformacao">
+                        <i class="fas fa-volume-up text-xl texto-branco"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-3 texto-branco">Qualidade Superior</h3>
+                    <p class="texto-cinza-400 text-sm leading-relaxed">Som de alta fidelidade para uma experiência musical imersiva e profissional</p>
+                </div>
+                
+                <!-- Benefício 2 -->
+                <div class="fundo-cinza-800 arredondado-lg p-6 hover:fundo-cinza-700 transicao-tudo duracao-300 hover-lift scroll-rotate group">
+                    <div class="w-12 h-12 gradiente-azul-indigo arredondado-lg flex itens-centro justificar-centro mb-4 group-hover:escala-110 transicao-transformacao">
+                        <svg class="texto-branco w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M3 8V5H0V3h3V0h2v3h3v2H5v3zm8-4q0 .51-.07 1H19v9.667h-1.5a3.5 3.5 0 1 0 3.5 3.5V3H10.93q.07.49.07 1m8 12.667v1.5a1.5 1.5 0 1 1-1.5-1.5zM6 10.71a7 7 0 0 0 2-.965v8.422a3.5 3.5 0 1 1-3.5-3.5H6zm0 5.957H4.5a1.5 1.5 0 1 0 1.5 1.5z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-3 texto-branco">Playlists Personalizadas</h3>
+                    <p class="texto-cinza-400 text-sm leading-relaxed">Crie e organize suas músicas favoritas do seu jeito, com recomendações inteligentes</p>
+                </div>
+                
+                <!-- Benefício 3 -->
+                <div class="fundo-cinza-800 arredondado-lg p-6 hover:fundo-cinza-700 transicao-tudo duracao-300 hover-lift scroll-bounce group">
+                    <div class="w-12 h-12 gradiente-verde-teal arredondado-lg flex itens-centro justificar-centro mb-4 group-hover:escala-110 transicao-transformacao">
+                        <i class="fas fa-search text-xl texto-branco"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-3 texto-branco">Descoberta de Artistas</h3>
+                    <p class="texto-cinza-400 text-sm leading-relaxed">Encontre novos talentos e expanda seu horizonte musical com nossa IA</p>
+                </div>
+                
+                <!-- Benefício 4 -->
+                <div class="fundo-cinza-800 arredondado-lg p-6 hover:fundo-cinza-700 transicao-tudo duracao-300 hover-lift scroll-flip group">
+                    <div class="w-12 h-12 gradiente-amarelo-laranja arredondado-lg flex itens-centro justificar-centro mb-4 group-hover:escala-110 transicao-transformacao">
+                        <i class="fas fa-mobile-alt text-xl texto-branco"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-3 texto-branco">Interface Intuitiva</h3>
+                    <p class="texto-cinza-400 text-sm leading-relaxed">Design limpo e fácil de usar, otimizado para todos os dispositivos</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Funcionalidades -->
+    <section id="funcionalidades" class="py-20 fundo-preto">
+        <div class="container mx-auto px-6">
+            <div class="texto-centro mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6 texto-branco scroll-fade-in">
+                    Recursos Incríveis
+                </h2>
+                <p class="text-xl texto-cinza-300 max-w-3xl mx-auto scroll-slide-right">
+                    Explore todas as ferramentas que o Melodia oferece para sua experiência musical
+                </p>
+            </div>
+            
+            <!-- Grid de Cards de Música -->
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+                <!-- Card 1 - Equalizador -->
+                <div class="fundo-cinza-800 arredondado-lg p-4 hover:fundo-cinza-700 transicao-tudo duracao-300 hover-lift scroll-scale group cursor-pointer">
+                    <div class="w-full h-32 gradiente-roxo-rosa arredondado-lg mb-3 flex itens-centro justificar-centro group-hover:escala-105 transicao-transformacao">
+                        <img src="equalizador.png" alt="Equalizador" class="w-12 h-12 object-contain">
+                    </div>
+                    <h3 class="font-semibold text-sm mb-1 texto-branco">Equalizador</h3>
+                    <p class="texto-cinza-400 text-xs">Ajuste perfeito</p>
+                </div>
+                
+                <!-- Card 2 - Compartilhar -->
+                <div class="fundo-cinza-800 arredondado-lg p-4 hover:fundo-cinza-700 transicao-tudo duracao-300 hover-lift scroll-rotate group cursor-pointer">
+                    <div class="w-full h-32 gradiente-azul-indigo arredondado-lg mb-3 flex itens-centro justificar-centro group-hover:escala-105 transicao-transformacao">
+                        <i class="fas fa-share-alt texto-branco text-2xl"></i>
+                    </div>
+                    <h3 class="font-semibold text-sm mb-1 texto-branco">Compartilhar</h3>
+                    <p class="texto-cinza-400 text-xs">Social music</p>
+                </div>
+                
+                <!-- Card 3 - Download -->
+                <div class="fundo-cinza-800 arredondado-lg p-4 hover:fundo-cinza-700 transicao-tudo duracao-300 hover-lift scroll-bounce group cursor-pointer">
+                    <div class="w-full h-32 gradiente-verde-teal arredondado-lg mb-3 flex itens-centro justificar-centro group-hover:escala-105 transicao-transformacao">
+                        <i class="fas fa-download texto-branco text-2xl"></i>
+                    </div>
+                    <h3 class="font-semibold text-sm mb-1 texto-branco">Offline</h3>
+                    <p class="texto-cinza-400 text-xs">Sempre disponível</p>
+                </div>
+                
+                <!-- Card 4 - IA -->
+                <div class="fundo-cinza-800 arredondado-lg p-4 hover:fundo-cinza-700 transicao-tudo duracao-300 hover-lift scroll-flip group cursor-pointer">
+                    <div class="w-full h-32 gradiente-amarelo-laranja arredondado-lg mb-3 flex itens-centro justificar-centro group-hover:escala-105 transicao-transformacao">
+                        <i class="fas fa-robot texto-branco text-2xl"></i>
+                    </div>
+                    <h3 class="font-semibold text-sm mb-1 texto-branco">IA Musical</h3>
+                    <p class="texto-cinza-400 text-xs">Recomendações</p>
+                </div>
+                
+                <!-- Card 5 - Eventos -->
+                <div class="fundo-cinza-800 arredondado-lg p-4 hover:fundo-cinza-700 transicao-tudo duracao-300 hover-lift scroll-slide-left group cursor-pointer">
+                    <div class="w-full h-32 gradiente-rosa-vermelho arredondado-lg mb-3 flex itens-centro justificar-centro group-hover:escala-105 transicao-transformacao">
+                        <i class="fas fa-calendar-alt texto-branco text-2xl"></i>
+                    </div>
+                    <h3 class="font-semibold text-sm mb-1 texto-branco">Eventos</h3>
+                    <p class="texto-cinza-400 text-xs">Shows próximos</p>
+                </div>
+                
+                <!-- Card 6 - Comunidade -->
+                <div class="fundo-cinza-800 arredondado-lg p-4 hover:fundo-cinza-700 transicao-tudo duracao-300 hover-lift scroll-slide-right group cursor-pointer">
+                    <div class="w-full h-32 gradiente-indigo-roxo arredondado-lg mb-3 flex itens-centro justificar-centro group-hover:escala-105 transicao-transformacao">
+                        <i class="fas fa-users texto-branco text-2xl"></i>
+                    </div>
+                    <h3 class="font-semibold text-sm mb-1 texto-branco">Comunidade</h3>
+                    <p class="texto-cinza-400 text-xs">Conecte-se</p>
+                </div>
+            </div>
+            
+            <!-- Seção de Playlists Recomendadas -->
+            <div class="mt-20">
+                <h3 class="text-2xl font-bold mb-8 texto-branco scroll-fade-in">Playlists Recomendadas</h3>
+                <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
+                    <!-- Playlist 1 -->
+                    <div class="fundo-cinza-800 arredondado-lg p-4 hover:fundo-cinza-700 transicao-tudo duracao-300 hover-lift scroll-bounce group cursor-pointer">
+                        <div class="w-full h-32 gradiente-roxo-rosa arredondado-lg mb-3 flex itens-centro justificar-centro group-hover:escala-105 transicao-transformacao">
+                            <i class="fas fa-fire texto-branco text-2xl"></i>
+                        </div>
+                        <h4 class="font-semibold text-sm mb-1 texto-branco">Trending</h4>
+                        <p class="texto-cinza-400 text-xs">Músicas em alta</p>
+                    </div>
+                    
+                    <!-- Playlist 2 -->
+                    <div class="fundo-cinza-800 arredondado-lg p-4 hover:fundo-cinza-700 transicao-tudo duracao-300 hover-lift scroll-rotate group cursor-pointer">
+                        <div class="w-full h-32 gradiente-azul-indigo arredondado-lg mb-3 flex itens-centro justificar-centro group-hover:escala-105 transicao-transformacao">
+                            <i class="fas fa-heart texto-branco text-2xl"></i>
+                        </div>
+                        <h4 class="font-semibold text-sm mb-1 texto-branco">Favoritas</h4>
+                        <p class="texto-cinza-400 text-xs">Suas preferidas</p>
+                    </div>
+                    
+                    <!-- Playlist 3 -->
+                    <div class="fundo-cinza-800 arredondado-lg p-4 hover:fundo-cinza-700 transicao-tudo duracao-300 hover-lift scroll-flip group cursor-pointer">
+                        <div class="w-full h-32 gradiente-verde-teal arredondado-lg mb-3 flex itens-centro justificar-centro group-hover:escala-105 transicao-transformacao">
+                            <i class="fas fa-moon texto-branco text-2xl"></i>
+                        </div>
+                        <h4 class="font-semibold text-sm mb-1 texto-branco">Relaxar</h4>
+                        <p class="texto-cinza-400 text-xs">Momentos calmos</p>
+                    </div>
+                    
+                    <!-- Playlist 4 -->
+                    <div class="fundo-cinza-800 arredondado-lg p-4 hover:fundo-cinza-700 transicao-tudo duracao-300 hover-lift scroll-scale group cursor-pointer">
+                        <div class="w-full h-32 gradiente-amarelo-laranja arredondado-lg mb-3 flex itens-centro justificar-centro group-hover:escala-105 transicao-transformacao">
+                            <i class="fas fa-dumbbell texto-branco text-2xl"></i>
+                        </div>
+                        <h4 class="font-semibold text-sm mb-1 texto-branco">Treino</h4>
+                        <p class="texto-cinza-400 text-xs">Energia total</p>
+                    </div>
+                    
+                    <!-- Playlist 5 -->
+                    <div class="fundo-cinza-800 arredondado-lg p-4 hover:fundo-cinza-700 transicao-tudo duracao-300 hover-lift scroll-slide-left group cursor-pointer">
+                        <div class="w-full h-32 bg-gradient-to-br from-pink-600 to-red-600 arredondado-lg mb-3 flex itens-centro justificar-centro group-hover:escala-105 transicao-transformacao">
+                            <i class="fas fa-car texto-branco text-2xl"></i>
+                        </div>
+                        <h4 class="font-semibold text-sm mb-1 texto-branco">Viagem</h4>
+                        <p class="texto-cinza-400 text-xs">Estrada afora</p>
+                    </div>
+                    
+                    <!-- Playlist 6 -->
+                    <div class="fundo-cinza-800 arredondado-lg p-4 hover:fundo-cinza-700 transicao-tudo duracao-300 hover-lift scroll-slide-right group cursor-pointer">
+                        <div class="w-full h-32 bg-gradient-to-br from-indigo-600 to-purple-600 arredondado-lg mb-3 flex itens-centro justificar-centro group-hover:escala-105 transicao-transformacao">
+                            <i class="fas fa-graduation-cap texto-branco text-2xl"></i>
+                        </div>
+                        <h4 class="font-semibold text-sm mb-1 texto-branco">Estudo</h4>
+                        <p class="texto-cinza-400 text-xs">Foco total</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Depoimentos Section -->
+    <section id="depoimentos" class="py-16 fundo-branco/5">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 texto-branco scroll-reveal">
+                    O que nossos usuários dizem
+                </h2>
+                <p class="texto-cinza-300 max-w-2xl mx-auto scroll-fade scroll-delay-1">
+                    Histórias reais de pessoas que transformaram sua experiência musical
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-6">
+                <!-- Depoimento 1 -->
+                <div class="fundo-branco/5 arredondado-lg p-6 hover-lift scroll-bounce scroll-delay-1">
+                    <div class="flex itens-centro mb-4">
+                        <div class="w-12 h-12 fundo-roxo-600 arredondado-completo flex itens-centro justificar-centro mr-3 hover-scale">
+                            <span class="texto-branco font-semibold">AS</span>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold texto-branco">Ana Silva</h4>
+                            <p class="texto-cinza-400 text-sm">Estudante de Música</p>
+                        </div>
+                    </div>
+                    <p class="texto-cinza-300 text-sm italic mb-3">
+                        "O Melodia revolucionou minha forma de descobrir música. A qualidade do som é incrível!"
+                    </p>
+                    <div class="flex texto-amarelo-400 text-sm">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                
+                <!-- Depoimento 2 -->
+                <div class="fundo-branco/5 arredondado-lg p-6 hover-lift scroll-bounce scroll-delay-2">
+                    <div class="flex itens-centro mb-4">
+                        <div class="w-12 h-12 bg-blue-600 arredondado-completo flex itens-centro justificar-centro mr-3 hover-scale">
+                            <span class="texto-branco font-semibold">CS</span>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold texto-branco">Carlos Santos</h4>
+                            <p class="texto-cinza-400 text-sm">DJ Profissional</p>
+                        </div>
+                    </div>
+                    <p class="texto-cinza-300 text-sm italic mb-3">
+                        "Qualidade de som excepcional e interface super intuitiva. Perfeito para profissionais!"
+                    </p>
+                    <div class="flex texto-amarelo-400 text-sm">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                
+                <!-- Depoimento 3 -->
+                <div class="fundo-branco/5 arredondado-lg p-6 hover-lift scroll-bounce scroll-delay-3">
+                    <div class="flex itens-centro mb-4">
+                        <div class="w-12 h-12 bg-pink-600 arredondado-completo flex itens-centro justificar-centro mr-3 hover-scale">
+                            <span class="texto-branco font-semibold">MC</span>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold texto-branco">Marina Costa</h4>
+                            <p class="texto-cinza-400 text-sm">Produtora Musical</p>
+                        </div>
+                    </div>
+                    <p class="texto-cinza-300 text-sm italic mb-3">
+                        "A descoberta de novos artistas é fantástica! Encontrei vários talentos incríveis."
+                    </p>
+                    <div class="flex texto-amarelo-400 text-sm">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Formulário de Contato Section -->
+    <section id="contato" class="py-20 bg-gray-900">
+        <div class="container mx-auto px-6">
+            <div class="max-w-2xl mx-auto text-center">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6 texto-branco scroll-fade-in">
+                    Comece a ouvir hoje
+                </h2>
+                <p class="text-xl texto-cinza-300 mb-12 scroll-slide-left">
+                    Cadastre-se gratuitamente e descubra milhões de músicas
+                </p>
+                
+                <div class="grid md:grid-cols-2 gap-8 mb-12">
+                    <!-- Plano Gratuito -->
+                    <div class="fundo-cinza-800 arredondado-lg p-8 text-left scroll-scale">
+                        <h3 class="text-2xl font-bold mb-4 texto-branco">Gratuito</h3>
+                        <div class="text-4xl font-bold mb-6 texto-branco">R$ 0<span class="text-lg texto-cinza-400">/mês</span></div>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex itens-centro texto-cinza-300">
+                                <i class="fas fa-check text-green-500 mr-3"></i>
+                                Músicas com anúncios
+                            </li>
+                            <li class="flex itens-centro texto-cinza-300">
+                                <i class="fas fa-check text-green-500 mr-3"></i>
+                                Playlists personalizadas
+                            </li>
+                            <li class="flex itens-centro texto-cinza-300">
+                                <i class="fas fa-check text-green-500 mr-3"></i>
+                                Qualidade padrão
+                            </li>
+                        </ul>
+                        <button class="w-full fundo-branco texto-preto font-bold py-3 px-6 arredondado-completo hover:escala-105 transicao-transformacao">
+                            Começar grátis
+                        </button>
+                    </div>
+                    
+                    <!-- Plano Premium -->
+                    <div class="gradiente-roxo-rosa arredondado-lg p-8 text-left scroll-rotate relative">
+                        <div class="absolute top-4 right-4 fundo-branco texto-roxo-600 text-xs font-bold px-2 py-1 arredondado-completo">
+                            POPULAR
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4 texto-branco">Premium</h3>
+                        <div class="text-4xl font-bold mb-6 texto-branco">R$ 19,90<span class="text-lg texto-roxo-200">/mês</span></div>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex itens-centro texto-branco">
+                                <i class="fas fa-check texto-branco mr-3"></i>
+                                Sem anúncios
+                            </li>
+                            <li class="flex itens-centro texto-branco">
+                                <i class="fas fa-check texto-branco mr-3"></i>
+                                Qualidade superior
+                            </li>
+                            <li class="flex itens-centro texto-branco">
+                                <i class="fas fa-check texto-branco mr-3"></i>
+                                Download offline
+                            </li>
+                            <li class="flex itens-centro texto-branco">
+                                <i class="fas fa-check texto-branco mr-3"></i>
+                                IA musical avançada
+                            </li>
+                        </ul>
+                        <button class="w-full fundo-branco texto-roxo-600 font-bold py-3 px-6 arredondado-completo hover:escala-105 transicao-transformacao">
+                            Começar Premium
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Newsletter -->
+                <div class="fundo-cinza-800 arredondado-lg p-8 scroll-bounce">
+                    <h3 class="text-xl font-bold mb-4 texto-branco">Receba novidades</h3>
+                    <p class="texto-cinza-300 mb-6">Fique por dentro das últimas atualizações e lançamentos</p>
+                    
+                    <form class="flex flex-col sm:flex-row gap-4">
+                        <input type="email" 
+                               placeholder="Seu e-mail" 
+                               class="flex-1 px-4 py-3 fundo-cinza-700 borda borda-cinza-600 arredondado-lg texto-branco placeholder-cinza-400 focus:contorno-nenhum focus:borda-roxo-400 focus:fundo-cinza-600 transicao-tudo duracao-300">
+                        <button type="submit" 
+                                class="fundo-roxo-600 hover:fundo-roxo-700 texto-branco font-semibold py-3 px-8 arredondado-lg transicao-cores duration-300">
+                            Inscrever-se
+                        </button>
+                    </form>
+                    
+                    <p class="text-xs texto-cinza-400 mt-4">
+                        Ao se inscrever, você concorda com nossa 
+                        <a href="#" class="text-purple-400 hover:text-purple-300">Política de Privacidade</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="bg-black py-16">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8">
+                <!-- Logo e descrição -->
+                <div class="md:col-span-1">
+                    <div class="flex itens-centro mb-4">
+                        <div class="w-8 h-8 bg-gradient-to-r from-purple-500 to-pink-500 arredondado-completo flex itens-centro justificar-centro mr-3">
+                            <i class="fas fa-music texto-branco text-sm"></i>
+                        </div>
+                        <span class="text-2xl font-bold texto-branco">Melodia</span>
+                    </div>
+                    <p class="texto-cinza-400 text-sm mb-6 leading-relaxed">
+                        A plataforma de música mais completa do Brasil. 
+                        Descubra, organize e desfrute da música como nunca antes.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 fundo-cinza-800 arredondado-completo flex itens-centro justificar-centro hover:fundo-cinza-700 transicao-cores">
+                            <i class="fab fa-facebook texto-cinza-400"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 fundo-cinza-800 arredondado-completo flex itens-centro justificar-centro hover:fundo-cinza-700 transicao-cores">
+                            <i class="fab fa-twitter texto-cinza-400"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 fundo-cinza-800 arredondado-completo flex itens-centro justificar-centro hover:fundo-cinza-700 transicao-cores">
+                            <i class="fab fa-instagram texto-cinza-400"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 fundo-cinza-800 arredondado-completo flex itens-centro justificar-centro hover:fundo-cinza-700 transicao-cores">
+                            <i class="fab fa-youtube texto-cinza-400"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Empresa -->
+                <div>
+                    <h4 class="font-bold mb-4 texto-branco">Empresa</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="#" class="texto-cinza-400 hover:texto-branco transicao-cores">Sobre nós</a></li>
+                        <li><a href="#" class="texto-cinza-400 hover:texto-branco transicao-cores">Carreiras</a></li>
+                        <li><a href="#" class="texto-cinza-400 hover:texto-branco transicao-cores">Imprensa</a></li>
+                        <li><a href="#" class="texto-cinza-400 hover:texto-branco transicao-cores">Blog</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Comunidades -->
+                <div>
+                    <h4 class="font-bold mb-4 texto-branco">Comunidades</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="#" class="texto-cinza-400 hover:texto-branco transicao-cores">Para Artistas</a></li>
+                        <li><a href="#" class="texto-cinza-400 hover:texto-branco transicao-cores">Desenvolvedores</a></li>
+                        <li><a href="#" class="texto-cinza-400 hover:texto-branco transicao-cores">Publicidade</a></li>
+                        <li><a href="#" class="texto-cinza-400 hover:texto-branco transicao-cores">Investidores</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Links úteis -->
+                <div>
+                    <h4 class="font-bold mb-4 texto-branco">Links Úteis</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="#" class="texto-cinza-400 hover:texto-branco transicao-cores">Suporte</a></li>
+                        <li><a href="#" class="texto-cinza-400 hover:texto-branco transicao-cores">Player Web</a></li>
+                        <li><a href="#" class="texto-cinza-400 hover:texto-branco transicao-cores">App Móvel</a></li>
+                        <li><a href="#" class="texto-cinza-400 hover:texto-branco transicao-cores">Status</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="borda-superior borda-cinza-800 mt-12 pt-8">
+                <div class="flex flex-col md:flex-row justificar-entre items-center">
+                    <div class="flex flex-wrap gap-6 mb-4 md:mb-0">
+                        <a href="#" class="texto-cinza-400 hover:texto-branco text-sm transicao-cores">Legal</a>
+                        <a href="#" class="texto-cinza-400 hover:texto-branco text-sm transicao-cores">Centro de Privacidade</a>
+                        <a href="#" class="texto-cinza-400 hover:texto-branco text-sm transicao-cores">Política de Privacidade</a>
+                        <a href="#" class="texto-cinza-400 hover:texto-branco text-sm transicao-cores">Cookies</a>
+                        <a href="#" class="texto-cinza-400 hover:texto-branco text-sm transicao-cores">Sobre Anúncios</a>
+                    </div>
+                    <p class="texto-cinza-400 text-sm">
+                        © 2025 Melodia. Todos os direitos reservados.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
+</body>
+</html>

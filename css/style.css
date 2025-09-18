@@ -1,0 +1,1113 @@
+/* ===== ESTILOS CUSTOMIZADOS PARA O MELODIA - ESTILO SPOTIFY ===== */
+
+/* Configuração da fonte Inter (similar ao Spotify) */
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.6;
+    background-color: #000000;
+    color: #ffffff;
+}
+
+/* ===== ESTILO SPOTIFY ===== */
+
+/* Cards de música estilo Spotify */
+.spotify-card {
+    background: #181818;
+    border-radius: 8px;
+    padding: 16px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.spotify-card:hover {
+    background: #282828;
+    transform: translateY(-4px);
+}
+
+.spotify-card-image {
+    width: 100%;
+    height: 160px;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    background: linear-gradient(135deg, #1db954, #1ed760);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.spotify-card-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(29, 185, 84, 0.8), rgba(30, 215, 96, 0.8));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.spotify-card:hover .spotify-card-image::before {
+    opacity: 1;
+}
+
+.spotify-play-button {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    width: 48px;
+    height: 48px;
+    background: #1db954;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transform: translateY(8px);
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.spotify-card:hover .spotify-play-button {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.spotify-play-button:hover {
+    transform: scale(1.1);
+}
+
+/* Header estilo Spotify */
+.spotify-header {
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid #282828;
+}
+
+/* Botões estilo Spotify */
+.spotify-button {
+    background: #ffffff;
+    color: #000000;
+    border: none;
+    border-radius: 500px;
+    padding: 12px 24px;
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.spotify-button:hover {
+    transform: scale(1.04);
+    background: #f5f5f5;
+}
+
+.spotify-button-secondary {
+    background: transparent;
+    color: #ffffff;
+    border: 1px solid #727272;
+    border-radius: 500px;
+    padding: 12px 24px;
+    font-weight: 700;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.spotify-button-secondary:hover {
+    border-color: #ffffff;
+    transform: scale(1.04);
+}
+
+/* Gradientes estilo Spotify */
+.spotify-gradient-purple {
+    background: linear-gradient(135deg, #8b5cf6, #ec4899);
+}
+
+.spotify-gradient-blue {
+    background: linear-gradient(135deg, #3b82f6, #1e40af);
+}
+
+.spotify-gradient-green {
+    background: linear-gradient(135deg, #10b981, #059669);
+}
+
+.spotify-gradient-orange {
+    background: linear-gradient(135deg, #f59e0b, #d97706);
+}
+
+.spotify-gradient-pink {
+    background: linear-gradient(135deg, #ec4899, #be185d);
+}
+
+.spotify-gradient-indigo {
+    background: linear-gradient(135deg, #6366f1, #4338ca);
+}
+
+/* ===== DESIGN MINIMALISTA E CLEAN ===== */
+
+/* Espaçamento consistente */
+.section-spacing {
+    padding: 4rem 0;
+}
+
+/* Cards minimalistas */
+.minimal-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.minimal-card:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Botões minimalistas */
+.minimal-button {
+    background: #7c3aed;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.minimal-button:hover {
+    background: #6d28d9;
+    transform: translateY(-1px);
+}
+
+/* Inputs minimalistas */
+.minimal-input {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 0.5rem;
+    padding: 0.75rem 1rem;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.minimal-input:focus {
+    outline: none;
+    border-color: #7c3aed;
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.minimal-input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* ===== ANIMAÇÕES DE SCROLL SUAVES ===== */
+
+/* Elementos que serão animados */
+.scroll-reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.scroll-reveal.revealed {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Animação de fade in suave */
+.scroll-fade {
+    opacity: 0;
+    transition: opacity 1s ease-out;
+}
+
+.scroll-fade.revealed {
+    opacity: 1;
+}
+
+/* Animação de slide da esquerda */
+.scroll-slide-left {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.scroll-slide-left.revealed {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Animação de slide da direita */
+.scroll-slide-right {
+    opacity: 0;
+    transform: translateX(50px);
+    transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.scroll-slide-right.revealed {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Animação de scale suave */
+.scroll-scale {
+    opacity: 0;
+    transform: scale(0.8);
+    transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.scroll-scale.revealed {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Animação de rotação suave */
+.scroll-rotate {
+    opacity: 0;
+    transform: rotate(-10deg) scale(0.9);
+    transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.scroll-rotate.revealed {
+    opacity: 1;
+    transform: rotate(0deg) scale(1);
+}
+
+/* Animação de bounce suave */
+.scroll-bounce {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.scroll-bounce.revealed {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Animação de flip */
+.scroll-flip {
+    opacity: 0;
+    transform: perspective(1000px) rotateY(90deg);
+    transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.scroll-flip.revealed {
+    opacity: 1;
+    transform: perspective(1000px) rotateY(0deg);
+}
+
+/* Delay para animações em sequência */
+.scroll-delay-1 { transition-delay: 0.1s; }
+.scroll-delay-2 { transition-delay: 0.2s; }
+.scroll-delay-3 { transition-delay: 0.3s; }
+.scroll-delay-4 { transition-delay: 0.4s; }
+.scroll-delay-5 { transition-delay: 0.5s; }
+.scroll-delay-6 { transition-delay: 0.6s; }
+
+/* ===== EFEITOS PARALLAX ===== */
+
+/* Parallax suave para backgrounds */
+.parallax-bg {
+    transform: translateZ(0);
+    will-change: transform;
+}
+
+.parallax-slow {
+    transform: translateY(0);
+    transition: transform 0.1s ease-out;
+}
+
+.parallax-medium {
+    transform: translateY(0);
+    transition: transform 0.1s ease-out;
+}
+
+.parallax-fast {
+    transform: translateY(0);
+    transition: transform 0.1s ease-out;
+}
+
+/* ===== SMOOTH SCROLL ===== */
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
+/* Melhorar performance do scroll */
+* {
+    scroll-behavior: smooth;
+}
+
+/* ===== SCROLL-DRIVEN ANIMATIONS ===== */
+
+/* Container para scroll-driven animations */
+.scroll-container {
+    scroll-timeline: --page-scroll block;
+    overflow-y: auto;
+    height: 100vh;
+}
+
+/* Animação de progresso da página */
+@scroll-timeline page-progress {
+    source: selector(#scroll-container);
+    orientation: vertical;
+    scroll-offsets: 0%, 100%;
+}
+
+/* Barra de progresso do scroll */
+.scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background: linear-gradient(90deg, #8b5cf6, #ec4899, #3b82f6);
+    z-index: 1000;
+    animation: scroll-progress linear;
+    animation-timeline: scroll(root);
+    animation-range: 0% 100%;
+}
+
+@keyframes scroll-progress {
+    from { width: 0%; }
+    to { width: 100%; }
+}
+
+/* Animação de fade baseada em scroll */
+.scroll-fade-in {
+    opacity: 0;
+    animation: fade-in-scroll linear both;
+    animation-timeline: view();
+    animation-range: entry 0% entry 50%;
+}
+
+@keyframes fade-in-scroll {
+    from { 
+        opacity: 0; 
+        transform: translateY(50px);
+    }
+    to { 
+        opacity: 1; 
+        transform: translateY(0);
+    }
+}
+
+/* Animação de slide da esquerda baseada em scroll */
+.scroll-slide-left {
+    opacity: 0;
+    transform: translateX(-100px);
+    animation: slide-left-scroll linear both;
+    animation-timeline: view();
+    animation-range: entry 0% entry 60%;
+}
+
+@keyframes slide-left-scroll {
+    from { 
+        opacity: 0; 
+        transform: translateX(-100px);
+    }
+    to { 
+        opacity: 1; 
+        transform: translateX(0);
+    }
+}
+
+/* Animação de slide da direita baseada em scroll */
+.scroll-slide-right {
+    opacity: 0;
+    transform: translateX(100px);
+    animation: slide-right-scroll linear both;
+    animation-timeline: view();
+    animation-range: entry 0% entry 60%;
+}
+
+@keyframes slide-right-scroll {
+    from { 
+        opacity: 0; 
+        transform: translateX(100px);
+    }
+    to { 
+        opacity: 1; 
+        transform: translateX(0);
+    }
+}
+
+/* Animação de escala baseada em scroll */
+.scroll-scale {
+    opacity: 0;
+    transform: scale(0.8);
+    animation: scale-scroll linear both;
+    animation-timeline: view();
+    animation-range: entry 0% entry 50%;
+}
+
+@keyframes scale-scroll {
+    from { 
+        opacity: 0; 
+        transform: scale(0.8);
+    }
+    to { 
+        opacity: 1; 
+        transform: scale(1);
+    }
+}
+
+/* Animação de rotação baseada em scroll */
+.scroll-rotate {
+    opacity: 0;
+    transform: rotate(-10deg) scale(0.9);
+    animation: rotate-scroll linear both;
+    animation-timeline: view();
+    animation-range: entry 0% entry 60%;
+}
+
+@keyframes rotate-scroll {
+    from { 
+        opacity: 0; 
+        transform: rotate(-10deg) scale(0.9);
+    }
+    to { 
+        opacity: 1; 
+        transform: rotate(0deg) scale(1);
+    }
+}
+
+/* Animação de flip baseada em scroll */
+.scroll-flip {
+    opacity: 0;
+    transform: perspective(1000px) rotateY(90deg);
+    animation: flip-scroll linear both;
+    animation-timeline: view();
+    animation-range: entry 0% entry 70%;
+}
+
+@keyframes flip-scroll {
+    from { 
+        opacity: 0; 
+        transform: perspective(1000px) rotateY(90deg);
+    }
+    to { 
+        opacity: 1; 
+        transform: perspective(1000px) rotateY(0deg);
+    }
+}
+
+/* Animação de bounce baseada em scroll */
+.scroll-bounce {
+    opacity: 0;
+    transform: translateY(50px);
+    animation: bounce-scroll linear both;
+    animation-timeline: view();
+    animation-range: entry 0% entry 50%;
+}
+
+@keyframes bounce-scroll {
+    0% { 
+        opacity: 0; 
+        transform: translateY(50px);
+    }
+    50% { 
+        opacity: 1; 
+        transform: translateY(-10px);
+    }
+    100% { 
+        opacity: 1; 
+        transform: translateY(0);
+    }
+}
+
+/* Parallax baseado em scroll */
+.scroll-parallax {
+    animation: parallax-scroll linear;
+    animation-timeline: scroll(root);
+    animation-range: 0% 100%;
+}
+
+@keyframes parallax-scroll {
+    from { transform: translateY(0); }
+    to { transform: translateY(-50%); }
+}
+
+/* Animação de texto digitando baseada em scroll */
+.scroll-typewriter {
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typewriter-scroll steps(40, end) both;
+    animation-timeline: view();
+    animation-range: entry 0% entry 80%;
+}
+
+@keyframes typewriter-scroll {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+/* Animação de progresso circular baseada em scroll */
+.scroll-progress-circle {
+    animation: progress-circle linear both;
+    animation-timeline: view();
+    animation-range: entry 0% entry 100%;
+}
+
+@keyframes progress-circle {
+    from { stroke-dashoffset: 283; }
+    to { stroke-dashoffset: 0; }
+}
+
+/* Animação de contador baseada em scroll */
+.scroll-counter {
+    animation: counter-scroll linear both;
+    animation-timeline: view();
+    animation-range: entry 0% entry 50%;
+}
+
+@keyframes counter-scroll {
+    from { --counter: 0; }
+    to { --counter: 100; }
+}
+
+/* Animação de gradiente baseada em scroll */
+.scroll-gradient {
+    background: linear-gradient(45deg, #8b5cf6, #ec4899);
+    background-size: 200% 200%;
+    animation: gradient-scroll linear both;
+    animation-timeline: scroll(root);
+    animation-range: 0% 100%;
+}
+
+@keyframes gradient-scroll {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* ===== ESTILOS DOS BOTÕES E MODAIS ===== */
+
+/* Notificações */
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    padding: 16px 20px;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    transform: translateX(100%);
+    transition: all 0.3s ease;
+}
+
+.notification.show {
+    transform: translateX(0);
+}
+
+.notification.success {
+    background: linear-gradient(135deg, #10b981, #059669);
+    color: white;
+}
+
+.notification.error {
+    background: linear-gradient(135deg, #ef4444, #dc2626);
+    color: white;
+}
+
+.notification.info {
+    background: linear-gradient(135deg, #3b82f6, #2563eb);
+    color: white;
+}
+
+/* Modais */
+.modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 50;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.modal.show {
+    opacity: 1;
+}
+
+.modal-content {
+    background: #1f2937;
+    border-radius: 12px;
+    padding: 32px;
+    max-width: 28rem;
+    margin: 16px;
+    transform: scale(0.9);
+    transition: transform 0.3s ease;
+}
+
+.modal.show .modal-content {
+    transform: scale(1);
+}
+
+/* Botões interativos */
+button {
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+/* Cards clicáveis */
+.music-card {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.music-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Animações de entrada */
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideOutRight {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+}
+
+/* Responsividade para modais */
+@media (max-width: 768px) {
+    .modal-content {
+        margin: 8px;
+        padding: 24px;
+    }
+    
+    .notification {
+        right: 10px;
+        left: 10px;
+        transform: translateY(-100%);
+    }
+    
+    .notification.show {
+        transform: translateY(0);
+    }
+}
+
+/* ===== LOADING INICIAL ===== */
+
+body {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+body.loaded {
+    opacity: 1;
+}
+
+/* Loading spinner */
+.loading-spinner {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    border: 3px solid rgba(168, 85, 247, 0.3);
+    border-top: 3px solid #a855f7;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    z-index: 9999;
+}
+
+@keyframes spin {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* ===== ANIMAÇÕES DE HOVER SUAVES ===== */
+
+.hover-lift {
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.hover-lift:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.hover-scale {
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.hover-scale:hover {
+    transform: scale(1.05);
+}
+
+.hover-rotate {
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.hover-rotate:hover {
+    transform: rotate(5deg) scale(1.05);
+}
+
+/* ===== ANIMAÇÕES DE LOADING ===== */
+
+.loading-pulse {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+.loading-bounce {
+    animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(-25%);
+        animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+    }
+    50% {
+        transform: translateY(0);
+        animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+    }
+}
+
+/* ===== ELEMENTOS MUSICAIS ===== */
+
+/* Notas musicais flutuantes */
+.musical-notes {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.musical-notes i {
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+/* Efeito de ondas sonoras */
+@keyframes sound-wave {
+    0%, 100% {
+        transform: scaleY(1);
+    }
+    50% {
+        transform: scaleY(1.5);
+    }
+}
+
+.sound-wave {
+    animation: sound-wave 1s ease-in-out infinite;
+}
+
+/* ===== EFEITOS DE HOVER PERSONALIZADOS ===== */
+
+/* Efeito de brilho nos botões */
+.glow-button {
+    position: relative;
+    overflow: hidden;
+}
+
+.glow-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.glow-button:hover::before {
+    left: 100%;
+}
+
+/* Efeito de partículas musicais */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+.float {
+    animation: float 3s ease-in-out infinite;
+}
+
+/* ===== RESPONSIVIDADE PERSONALIZADA ===== */
+
+/* Ajustes para telas muito pequenas */
+@media (max-width: 480px) {
+    .text-6xl {
+        font-size: 3rem;
+    }
+    
+    .text-8xl {
+        font-size: 4rem;
+    }
+    
+    .text-4xl {
+        font-size: 2rem;
+    }
+    
+    .text-5xl {
+        font-size: 2.5rem;
+    }
+}
+
+/* Ajustes para tablets */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .container {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+/* ===== EFEITOS DE SCROLL ===== */
+
+/* Reveal animation on scroll */
+.reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ===== CUSTOMIZAÇÕES DO TAILWIND ===== */
+
+/* Gradientes personalizados */
+.bg-gradient-music {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.bg-gradient-purple-pink {
+    background: linear-gradient(135deg, #a855f7 0%, #ec4899 100%);
+}
+
+/* Sombras personalizadas */
+.shadow-music {
+    box-shadow: 0 20px 40px rgba(168, 85, 247, 0.3);
+}
+
+.shadow-glow {
+    box-shadow: 0 0 20px rgba(168, 85, 247, 0.5);
+}
+
+/* ===== EFEITOS DE TEXTO ===== */
+
+/* Texto com gradiente animado */
+.gradient-text {
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: gradient-shift 3s ease infinite;
+}
+
+@keyframes gradient-shift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* ===== EFEITOS DE CARDS ===== */
+
+/* Card com efeito de vidro */
+.glass-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
+
+/* Card com hover effect */
+.hover-lift {
+    transition: all 0.3s ease;
+}
+
+.hover-lift:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* ===== EFEITOS DE FORMULÁRIO ===== */
+
+/* Input com foco personalizado */
+.focus-ring:focus {
+    outline: none;
+    border-color: #a855f7;
+    box-shadow: 0 0 0 3px rgba(168, 85, 247, 0.1);
+}
+
+/* ===== LOADING E ESTADOS ===== */
+
+/* Spinner personalizado */
+.spinner {
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top: 4px solid #a855f7;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* ===== EFEITOS DE PARTÍCULAS ===== */
+
+/* Partículas musicais */
+.particle {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: #a855f7;
+    border-radius: 50%;
+    animation: particle-float 6s linear infinite;
+}
+
+@keyframes particle-float {
+    0% {
+        transform: translateY(100vh) rotate(0deg);
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100px) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* ===== UTILITÁRIOS ===== */
+
+/* Smooth scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Seleção de texto personalizada */
+::selection {
+    background: rgba(168, 85, 247, 0.3);
+    color: white;
+}
+
+/* Scrollbar personalizada */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, #a855f7, #ec4899);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, #9333ea, #db2777);
+}
+
+/* ===== EFEITOS DE PERFORMANCE ===== */
+
+/* Otimização de animações */
+.will-change-transform {
+    will-change: transform;
+}
+
+.will-change-opacity {
+    will-change: opacity;
+}
+
+/* ===== ACESSIBILIDADE ===== */
+
+/* Reduzir animações para usuários que preferem */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* ===== DARK MODE SUPPORT ===== */
+
+@media (prefers-color-scheme: dark) {
+    /* Ajustes para modo escuro nativo */
+    .auto-dark {
+        background-color: rgba(0, 0, 0, 0.8);
+        color: white;
+    }
+}
+
+/* ===== PRINT STYLES ===== */
+
+@media print {
+    .no-print {
+        display: none !important;
+    }
+    
+    body {
+        background: white !important;
+        color: black !important;
+    }
+}
