@@ -18,7 +18,6 @@ document.addEventListener('DOMContentLoaded', function() {
         initScrollAnimations();
         initHoverAnimations();
         initFormHandling();
-        initParticleEffects();
         initMusicPlayer();
         initTypingEffect();
         initCounters();
@@ -183,45 +182,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // ===== EFEITOS DE PARTÍCULAS =====
     
-    function initParticleEffects() {
-        // Criar partículas musicais
-        createMusicalParticles();
-        
-        // Efeito de cursor musical removido
-    }
     
-    function createMusicalParticles() {
-        const heroSection = document.getElementById('hero');
-        
-        if (!heroSection) return;
-        
-        // Criar partículas periodicamente
-        setInterval(() => {
-            createParticle(heroSection);
-        }, 3000);
-    }
-    
-    function createParticle(container) {
-        const particle = document.createElement('div');
-        particle.className = 'particle';
-        
-        // Posição aleatória
-        particle.style.left = Math.random() * 100 + '%';
-        particle.style.animationDelay = Math.random() * 2 + 's';
-        
-        // Cores aleatórias
-        const colors = ['#a855f7', '#ec4899', '#3b82f6', '#10b981', '#f59e0b'];
-        particle.style.background = colors[Math.floor(Math.random() * colors.length)];
-        
-        container.appendChild(particle);
-        
-        // Remover após animação
-        setTimeout(() => {
-            if (particle.parentNode) {
-                particle.parentNode.removeChild(particle);
-            }
-        }, 6000);
-    }
     
     // Função de cursor musical removida
     
@@ -713,7 +674,7 @@ document.addEventListener('DOMContentLoaded', function() {
     console.log('📱 Funcionalidades ativas:', {
         scrollAnimations: true,
         formHandling: true,
-        particleEffects: true,
+        particleEffects: false,
         musicPlayer: true,
         smoothScrolling: true,
         typingEffect: true,

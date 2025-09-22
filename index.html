@@ -18,12 +18,10 @@
     
     <!-- CSS Customizado -->
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/classes-portugues.css">
 </head>
 <body class="font-inter bg-black texto-branco">
     
-    <!-- Barra de progresso do scroll -->
-    <div class="scroll-progress"></div>
+    <!-- Barra de progresso do scroll removida -->
     
     <!-- Cabeçalho/Navegação -->
     <header class="fixo topo-0 esquerda-0 direita-0 z-50 fundo-preto/80 desfoque-fundo borda-inferior borda-cinza-800">
@@ -59,19 +57,19 @@
             <div class="grid lg:grid-cols-2 gap-12 itens-centro">
                 <!-- Conteúdo Esquerdo -->
                 <div class="texto-esquerda">
-                    <h1 class="text-6xl md:text-8xl font-bold mb-6 leading-tight scroll-fade-in">
+                    <h1 class="text-6xl md:text-8xl font-bold mb-6 leading-tight">
                         Sua música,<br>
-                        <span class="gradiente-texto-roxo-rosa scroll-gradient">
+                        <span class="gradiente-texto-roxo-rosa">
                             sua forma
                         </span>
                     </h1>
                     
-                    <p class="text-xl texto-cinza-300 mb-8 max-w-lg scroll-slide-left">
+                    <p class="text-xl texto-cinza-300 mb-8 max-w-lg">
                         Descubra milhões de músicas, crie playlists personalizadas e encontre novos artistas. 
                         Tudo isso com qualidade de som superior.
                     </p>
                     
-                    <div class="flex flex-col sm:flex-row gap-4 scroll-scale">
+                    <div class="flex flex-col sm:flex-row gap-4">
                         <button class="fundo-branco texto-preto font-semibold px-8 py-4 arredondado-completo hover:escala-105 transicao-transformacao flex itens-centro justificar-centro">
                             <i class="fas fa-play mr-3"></i>
                             Começar a ouvir
@@ -82,11 +80,11 @@
                     </div>
                 </div>
                 
-                <!-- Conteúdo Direito - Cards de Música -->
-                <div class="relativo scroll-parallax">
+                <!-- Cards de Música -->
+                <div class="relativo">
                     <div class="grid grid-cols-2 gap-4">
                         <!-- Card 1 -->
-                        <div class="fundo-cinza-900 arredondado-lg p-4 hover:fundo-cinza-800 transicao-cores cursor-pointer scroll-slide-right">
+                        <div class="fundo-cinza-900 arredondado-lg p-4 hover:fundo-cinza-800 transicao-cores cursor-pointer">
                             <div class="w-full h-32 gradiente-roxo-rosa arredondado-lg mb-3 flex itens-centro justificar-centro">
                                 <i class="fas fa-music texto-branco text-2xl"></i>
                             </div>
@@ -95,7 +93,7 @@
                         </div>
                         
                         <!-- Card 2 -->
-                        <div class="fundo-cinza-900 arredondado-lg p-4 hover:fundo-cinza-800 transicao-cores cursor-pointer mt-8 scroll-rotate">
+                        <div class="fundo-cinza-900 arredondado-lg p-4 hover:fundo-cinza-800 transicao-cores cursor-pointer mt-8">
                             <div class="w-full h-32 gradiente-azul-indigo arredondado-lg mb-3 flex itens-centro justificar-centro">
                                 <i class="fas fa-heart texto-branco text-2xl"></i>
                             </div>
@@ -104,7 +102,7 @@
                         </div>
                         
                         <!-- Card 3 -->
-                        <div class="fundo-cinza-900 arredondado-lg p-4 hover:fundo-cinza-800 transicao-cores cursor-pointer -mt-4 scroll-bounce">
+                        <div class="fundo-cinza-900 arredondado-lg p-4 hover:fundo-cinza-800 transicao-cores cursor-pointer -mt-4">
                             <div class="w-full h-32 gradiente-verde-teal arredondado-lg mb-3 flex itens-centro justificar-centro">
                                 <i class="fas fa-search texto-branco text-2xl"></i>
                             </div>
@@ -113,7 +111,7 @@
                         </div>
                         
                         <!-- Card 4 -->
-                        <div class="fundo-cinza-900 arredondado-lg p-4 hover:fundo-cinza-800 transicao-cores cursor-pointer mt-4 scroll-flip">
+                        <div class="fundo-cinza-900 arredondado-lg p-4 hover:fundo-cinza-800 transicao-cores cursor-pointer mt-4">
                             <div class="w-full h-32 gradiente-amarelo-laranja arredondado-lg mb-3 flex itens-centro justificar-centro">
                                 <svg class="texto-branco w-8 h-8" viewBox="0 0 24 24" fill="currentColor">
                                     <path d="M3 8V5H0V3h3V0h2v3h3v2H5v3zm8-4q0 .51-.07 1H19v9.667h-1.5a3.5 3.5 0 1 0 3.5 3.5V3H10.93q.07.49.07 1m8 12.667v1.5a1.5 1.5 0 1 1-1.5-1.5zM6 10.71a7 7 0 0 0 2-.965v8.422a3.5 3.5 0 1 1-3.5-3.5H6zm0 5.957H4.5a1.5 1.5 0 1 0 1.5 1.5z"/>
@@ -127,7 +125,7 @@
             </div>
         </div>
         
-        <!-- Player de áudio flutuante -->
+        <!-- áudio flutuante -->
         <div id="audioPlayer" class="fixed bottom-6 right-6 bg-gray-900 arredondado-lg p-4 shadow-2xl hidden max-w-sm">
             <div class="flex itens-centro justificar-entre mb-3">
                 <div class="flex itens-centro space-x-3">
@@ -149,21 +147,21 @@
         </div>
     </section>
 
-    <!-- Seção Apresentação -->
+    <!-- Apresentação -->
     <section id="apresentacao" class="py-20 fundo-cinza-900">
         <div class="container mx-auto px-6">
             <div class="texto-centro mb-16">
-                <h2 class="text-4xl md:text-5xl font-bold mb-6 texto-branco scroll-fade-in">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6 texto-branco">
                     Por que escolher o Melodia?
                 </h2>
-                <p class="text-xl texto-cinza-300 max-w-3xl mx-auto scroll-slide-left">
+                <p class="text-xl texto-cinza-300 max-w-3xl mx-auto">
                     A plataforma de música mais completa, desenvolvida para verdadeiros amantes da música
                 </p>
             </div>
             
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <!-- Benefício 1 -->
-                <div class="fundo-cinza-800 arredondado-lg p-6 hover:fundo-cinza-700 transicao-tudo duracao-300 hover-lift scroll-scale group">
+                <div class="fundo-cinza-800 arredondado-lg p-6 hover:fundo-cinza-700 transicao-tudo duracao-300 hover-lift group">
                     <div class="w-12 h-12 gradiente-roxo-rosa arredondado-lg flex itens-centro justificar-centro mb-4 group-hover:escala-110 transicao-transformacao">
                         <i class="fas fa-volume-up text-xl texto-branco"></i>
                     </div>
@@ -172,7 +170,7 @@
                 </div>
                 
                 <!-- Benefício 2 -->
-                <div class="fundo-cinza-800 arredondado-lg p-6 hover:fundo-cinza-700 transicao-tudo duracao-300 hover-lift scroll-rotate group">
+                <div class="fundo-cinza-800 arredondado-lg p-6 hover:fundo-cinza-700 transicao-tudo duracao-300 hover-lift group">
                     <div class="w-12 h-12 gradiente-azul-indigo arredondado-lg flex itens-centro justificar-centro mb-4 group-hover:escala-110 transicao-transformacao">
                         <svg class="texto-branco w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
                             <path d="M3 8V5H0V3h3V0h2v3h3v2H5v3zm8-4q0 .51-.07 1H19v9.667h-1.5a3.5 3.5 0 1 0 3.5 3.5V3H10.93q.07.49.07 1m8 12.667v1.5a1.5 1.5 0 1 1-1.5-1.5zM6 10.71a7 7 0 0 0 2-.965v8.422a3.5 3.5 0 1 1-3.5-3.5H6zm0 5.957H4.5a1.5 1.5 0 1 0 1.5 1.5z"/>
@@ -183,7 +181,7 @@
                 </div>
                 
                 <!-- Benefício 3 -->
-                <div class="fundo-cinza-800 arredondado-lg p-6 hover:fundo-cinza-700 transicao-tudo duracao-300 hover-lift scroll-bounce group">
+                <div class="fundo-cinza-800 arredondado-lg p-6 hover:fundo-cinza-700 transicao-tudo duracao-300 hover-lift group">
                     <div class="w-12 h-12 gradiente-verde-teal arredondado-lg flex itens-centro justificar-centro mb-4 group-hover:escala-110 transicao-transformacao">
                         <i class="fas fa-search text-xl texto-branco"></i>
                     </div>
@@ -192,7 +190,7 @@
                 </div>
                 
                 <!-- Benefício 4 -->
-                <div class="fundo-cinza-800 arredondado-lg p-6 hover:fundo-cinza-700 transicao-tudo duracao-300 hover-lift scroll-flip group">
+                <div class="fundo-cinza-800 arredondado-lg p-6 hover:fundo-cinza-700 transicao-tudo duracao-300 hover-lift group">
                     <div class="w-12 h-12 gradiente-amarelo-laranja arredondado-lg flex itens-centro justificar-centro mb-4 group-hover:escala-110 transicao-transformacao">
                         <i class="fas fa-mobile-alt text-xl texto-branco"></i>
                     </div>
@@ -203,22 +201,22 @@
         </div>
     </section>
 
-    <!-- Seção Funcionalidades -->
+    <!-- Funcionalidades -->
     <section id="funcionalidades" class="py-20 fundo-preto">
         <div class="container mx-auto px-6">
             <div class="texto-centro mb-16">
-                <h2 class="text-4xl md:text-5xl font-bold mb-6 texto-branco scroll-fade-in">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6 texto-branco">
                     Recursos Incríveis
                 </h2>
-                <p class="text-xl texto-cinza-300 max-w-3xl mx-auto scroll-slide-right">
+                <p class="text-xl texto-cinza-300 max-w-3xl mx-auto">
                     Explore todas as ferramentas que o Melodia oferece para sua experiência musical
                 </p>
             </div>
             
-            <!-- Grid de Cards de Música -->
+            <!-- Cards de Música -->
             <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
                 <!-- Card 1 - Equalizador -->
-                <div class="fundo-cinza-800 arredondado-lg p-4 hover:fundo-cinza-700 transicao-tudo duracao-300 hover-lift scroll-scale group cursor-pointer">
+                <div class="fundo-cinza-800 arredondado-lg p-4 hover:fundo-cinza-700 transicao-tudo duracao-300 hover-lift group cursor-pointer">
                     <div class="w-full h-32 gradiente-roxo-rosa arredondado-lg mb-3 flex itens-centro justificar-centro group-hover:escala-105 transicao-transformacao">
                         <img src="equalizador.png" alt="Equalizador" class="w-12 h-12 object-contain">
                     </div>
@@ -227,7 +225,7 @@
                 </div>
                 
                 <!-- Card 2 - Compartilhar -->
-                <div class="fundo-cinza-800 arredondado-lg p-4 hover:fundo-cinza-700 transicao-tudo duracao-300 hover-lift scroll-rotate group cursor-pointer">
+                <div class="fundo-cinza-800 arredondado-lg p-4 hover:fundo-cinza-700 transicao-tudo duracao-300 hover-lift group cursor-pointer">
                     <div class="w-full h-32 gradiente-azul-indigo arredondado-lg mb-3 flex itens-centro justificar-centro group-hover:escala-105 transicao-transformacao">
                         <i class="fas fa-share-alt texto-branco text-2xl"></i>
                     </div>
@@ -236,7 +234,7 @@
                 </div>
                 
                 <!-- Card 3 - Download -->
-                <div class="fundo-cinza-800 arredondado-lg p-4 hover:fundo-cinza-700 transicao-tudo duracao-300 hover-lift scroll-bounce group cursor-pointer">
+                <div class="fundo-cinza-800 arredondado-lg p-4 hover:fundo-cinza-700 transicao-tudo duracao-300 hover-lift group cursor-pointer">
                     <div class="w-full h-32 gradiente-verde-teal arredondado-lg mb-3 flex itens-centro justificar-centro group-hover:escala-105 transicao-transformacao">
                         <i class="fas fa-download texto-branco text-2xl"></i>
                     </div>
@@ -245,7 +243,7 @@
                 </div>
                 
                 <!-- Card 4 - IA -->
-                <div class="fundo-cinza-800 arredondado-lg p-4 hover:fundo-cinza-700 transicao-tudo duracao-300 hover-lift scroll-flip group cursor-pointer">
+                <div class="fundo-cinza-800 arredondado-lg p-4 hover:fundo-cinza-700 transicao-tudo duracao-300 hover-lift group cursor-pointer">
                     <div class="w-full h-32 gradiente-amarelo-laranja arredondado-lg mb-3 flex itens-centro justificar-centro group-hover:escala-105 transicao-transformacao">
                         <i class="fas fa-robot texto-branco text-2xl"></i>
                     </div>
@@ -254,7 +252,7 @@
                 </div>
                 
                 <!-- Card 5 - Eventos -->
-                <div class="fundo-cinza-800 arredondado-lg p-4 hover:fundo-cinza-700 transicao-tudo duracao-300 hover-lift scroll-slide-left group cursor-pointer">
+                <div class="fundo-cinza-800 arredondado-lg p-4 hover:fundo-cinza-700 transicao-tudo duracao-300 hover-lift group cursor-pointer">
                     <div class="w-full h-32 gradiente-rosa-vermelho arredondado-lg mb-3 flex itens-centro justificar-centro group-hover:escala-105 transicao-transformacao">
                         <i class="fas fa-calendar-alt texto-branco text-2xl"></i>
                     </div>
@@ -263,7 +261,7 @@
                 </div>
                 
                 <!-- Card 6 - Comunidade -->
-                <div class="fundo-cinza-800 arredondado-lg p-4 hover:fundo-cinza-700 transicao-tudo duracao-300 hover-lift scroll-slide-right group cursor-pointer">
+                <div class="fundo-cinza-800 arredondado-lg p-4 hover:fundo-cinza-700 transicao-tudo duracao-300 hover-lift group cursor-pointer">
                     <div class="w-full h-32 gradiente-indigo-roxo arredondado-lg mb-3 flex itens-centro justificar-centro group-hover:escala-105 transicao-transformacao">
                         <i class="fas fa-users texto-branco text-2xl"></i>
                     </div>
@@ -274,10 +272,10 @@
             
             <!-- Seção de Playlists Recomendadas -->
             <div class="mt-20">
-                <h3 class="text-2xl font-bold mb-8 texto-branco scroll-fade-in">Playlists Recomendadas</h3>
+                <h3 class="text-2xl font-bold mb-8 texto-branco">Playlists Recomendadas</h3>
                 <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
                     <!-- Playlist 1 -->
-                    <div class="fundo-cinza-800 arredondado-lg p-4 hover:fundo-cinza-700 transicao-tudo duracao-300 hover-lift scroll-bounce group cursor-pointer">
+                    <div class="fundo-cinza-800 arredondado-lg p-4 hover:fundo-cinza-700 transicao-tudo duracao-300 hover-lift group cursor-pointer">
                         <div class="w-full h-32 gradiente-roxo-rosa arredondado-lg mb-3 flex itens-centro justificar-centro group-hover:escala-105 transicao-transformacao">
                             <i class="fas fa-fire texto-branco text-2xl"></i>
                         </div>
@@ -286,7 +284,7 @@
                     </div>
                     
                     <!-- Playlist 2 -->
-                    <div class="fundo-cinza-800 arredondado-lg p-4 hover:fundo-cinza-700 transicao-tudo duracao-300 hover-lift scroll-rotate group cursor-pointer">
+                    <div class="fundo-cinza-800 arredondado-lg p-4 hover:fundo-cinza-700 transicao-tudo duracao-300 hover-lift group cursor-pointer">
                         <div class="w-full h-32 gradiente-azul-indigo arredondado-lg mb-3 flex itens-centro justificar-centro group-hover:escala-105 transicao-transformacao">
                             <i class="fas fa-heart texto-branco text-2xl"></i>
                         </div>
@@ -295,7 +293,7 @@
                     </div>
                     
                     <!-- Playlist 3 -->
-                    <div class="fundo-cinza-800 arredondado-lg p-4 hover:fundo-cinza-700 transicao-tudo duracao-300 hover-lift scroll-flip group cursor-pointer">
+                    <div class="fundo-cinza-800 arredondado-lg p-4 hover:fundo-cinza-700 transicao-tudo duracao-300 hover-lift group cursor-pointer">
                         <div class="w-full h-32 gradiente-verde-teal arredondado-lg mb-3 flex itens-centro justificar-centro group-hover:escala-105 transicao-transformacao">
                             <i class="fas fa-moon texto-branco text-2xl"></i>
                         </div>
@@ -304,7 +302,7 @@
                     </div>
                     
                     <!-- Playlist 4 -->
-                    <div class="fundo-cinza-800 arredondado-lg p-4 hover:fundo-cinza-700 transicao-tudo duracao-300 hover-lift scroll-scale group cursor-pointer">
+                    <div class="fundo-cinza-800 arredondado-lg p-4 hover:fundo-cinza-700 transicao-tudo duracao-300 hover-lift group cursor-pointer">
                         <div class="w-full h-32 gradiente-amarelo-laranja arredondado-lg mb-3 flex itens-centro justificar-centro group-hover:escala-105 transicao-transformacao">
                             <i class="fas fa-dumbbell texto-branco text-2xl"></i>
                         </div>
@@ -313,7 +311,7 @@
                     </div>
                     
                     <!-- Playlist 5 -->
-                    <div class="fundo-cinza-800 arredondado-lg p-4 hover:fundo-cinza-700 transicao-tudo duracao-300 hover-lift scroll-slide-left group cursor-pointer">
+                    <div class="fundo-cinza-800 arredondado-lg p-4 hover:fundo-cinza-700 transicao-tudo duracao-300 hover-lift group cursor-pointer">
                         <div class="w-full h-32 bg-gradient-to-br from-pink-600 to-red-600 arredondado-lg mb-3 flex itens-centro justificar-centro group-hover:escala-105 transicao-transformacao">
                             <i class="fas fa-car texto-branco text-2xl"></i>
                         </div>
@@ -322,7 +320,7 @@
                     </div>
                     
                     <!-- Playlist 6 -->
-                    <div class="fundo-cinza-800 arredondado-lg p-4 hover:fundo-cinza-700 transicao-tudo duracao-300 hover-lift scroll-slide-right group cursor-pointer">
+                    <div class="fundo-cinza-800 arredondado-lg p-4 hover:fundo-cinza-700 transicao-tudo duracao-300 hover-lift group cursor-pointer">
                         <div class="w-full h-32 bg-gradient-to-br from-indigo-600 to-purple-600 arredondado-lg mb-3 flex itens-centro justificar-centro group-hover:escala-105 transicao-transformacao">
                             <i class="fas fa-graduation-cap texto-branco text-2xl"></i>
                         </div>
@@ -334,23 +332,23 @@
         </div>
     </section>
 
-    <!-- Depoimentos Section -->
+    <!-- Depoimentos -->
     <section id="depoimentos" class="py-16 fundo-branco/5">
         <div class="container mx-auto px-6">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4 texto-branco scroll-reveal">
+            <div class="texto-centro mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 texto-branco">
                     O que nossos usuários dizem
                 </h2>
-                <p class="texto-cinza-300 max-w-2xl mx-auto scroll-fade scroll-delay-1">
+                <p class="texto-cinza-300 max-w-2xl mx-auto">
                     Histórias reais de pessoas que transformaram sua experiência musical
                 </p>
             </div>
             
             <div class="grid md:grid-cols-3 gap-6">
                 <!-- Depoimento 1 -->
-                <div class="fundo-branco/5 arredondado-lg p-6 hover-lift scroll-bounce scroll-delay-1">
+                <div class="fundo-branco/5 arredondado-lg p-6">
                     <div class="flex itens-centro mb-4">
-                        <div class="w-12 h-12 fundo-roxo-600 arredondado-completo flex itens-centro justificar-centro mr-3 hover-scale">
+                        <div class="w-12 h-12 fundo-roxo-600 arredondado-completo flex itens-centro justificar-centro mr-3">
                             <span class="texto-branco font-semibold">AS</span>
                         </div>
                         <div>
@@ -371,9 +369,9 @@
                 </div>
                 
                 <!-- Depoimento 2 -->
-                <div class="fundo-branco/5 arredondado-lg p-6 hover-lift scroll-bounce scroll-delay-2">
+                <div class="fundo-branco/5 arredondado-lg p-6">
                     <div class="flex itens-centro mb-4">
-                        <div class="w-12 h-12 bg-blue-600 arredondado-completo flex itens-centro justificar-centro mr-3 hover-scale">
+                        <div class="w-12 h-12 fundo-azul-600 arredondado-completo flex itens-centro justificar-centro mr-3">
                             <span class="texto-branco font-semibold">CS</span>
                         </div>
                         <div>
@@ -394,9 +392,9 @@
                 </div>
                 
                 <!-- Depoimento 3 -->
-                <div class="fundo-branco/5 arredondado-lg p-6 hover-lift scroll-bounce scroll-delay-3">
+                <div class="fundo-branco/5 arredondado-lg p-6">
                     <div class="flex itens-centro mb-4">
-                        <div class="w-12 h-12 bg-pink-600 arredondado-completo flex itens-centro justificar-centro mr-3 hover-scale">
+                        <div class="w-12 h-12 fundo-rosa-600 arredondado-completo flex itens-centro justificar-centro mr-3">
                             <span class="texto-branco font-semibold">MC</span>
                         </div>
                         <div>
@@ -419,20 +417,20 @@
         </div>
     </section>
 
-    <!-- Formulário de Contato Section -->
+    
     <section id="contato" class="py-20 bg-gray-900">
         <div class="container mx-auto px-6">
             <div class="max-w-2xl mx-auto text-center">
-                <h2 class="text-4xl md:text-5xl font-bold mb-6 texto-branco scroll-fade-in">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6 texto-branco">
                     Comece a ouvir hoje
                 </h2>
-                <p class="text-xl texto-cinza-300 mb-12 scroll-slide-left">
+                <p class="text-xl texto-cinza-300 mb-12">
                     Cadastre-se gratuitamente e descubra milhões de músicas
                 </p>
                 
                 <div class="grid md:grid-cols-2 gap-8 mb-12">
                     <!-- Plano Gratuito -->
-                    <div class="fundo-cinza-800 arredondado-lg p-8 text-left scroll-scale">
+                    <div class="fundo-cinza-800 arredondado-lg p-8 text-left">
                         <h3 class="text-2xl font-bold mb-4 texto-branco">Gratuito</h3>
                         <div class="text-4xl font-bold mb-6 texto-branco">R$ 0<span class="text-lg texto-cinza-400">/mês</span></div>
                         <ul class="space-y-3 mb-8">
@@ -455,7 +453,7 @@
                     </div>
                     
                     <!-- Plano Premium -->
-                    <div class="gradiente-roxo-rosa arredondado-lg p-8 text-left scroll-rotate relative">
+                    <div class="gradiente-roxo-rosa arredondado-lg p-8 text-left relative">
                         <div class="absolute top-4 right-4 fundo-branco texto-roxo-600 text-xs font-bold px-2 py-1 arredondado-completo">
                             POPULAR
                         </div>
@@ -485,8 +483,8 @@
                     </div>
                 </div>
                 
-                <!-- Newsletter -->
-                <div class="fundo-cinza-800 arredondado-lg p-8 scroll-bounce">
+               
+                <div class="fundo-cinza-800 arredondado-lg p-8">
                     <h3 class="text-xl font-bold mb-4 texto-branco">Receba novidades</h3>
                     <p class="texto-cinza-300 mb-6">Fique por dentro das últimas atualizações e lançamentos</p>
                     

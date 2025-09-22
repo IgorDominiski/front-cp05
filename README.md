@@ -1,3 +1,4 @@
+## Integrantes: Igor Dominiski RM562055, Murillo Akira RM561886, Murilo Canestri RM564053, Arthur Canaverde RM:563029, Lucas Zago RM562028.
 # 🎵 Melodia - Landing Page
 
 Uma landing page moderna e responsiva para o aplicativo de música Melodia, desenvolvida com foco em design clean, cores vibrantes e elementos musicais.
@@ -39,50 +40,6 @@ CP-front-05/
 └── README.md          # Documentação do projeto
 ```
 
-## 🎨 Seções da Landing Page
-
-### 1. **Hero Section**
-- Título impactante: "Melodia: Sua Música, Sua Forma"
-- Descrição do aplicativo
-- Botão CTA: "Ouvir Agora"
-- Demonstração visual do app
-
-### 2. **Apresentação**
-- Explicação dos principais benefícios
-- Ícones Font Awesome para destacar cada benefício
-- Design consistente com Tailwind CSS
-
-### 3. **Funcionalidades**
-- Apresentação visual das funcionalidades principais
-- Cards interativos para cada funcionalidade
-- Efeitos hover e animações
-
-### 4. **Depoimentos**
-- Testimonials de usuários satisfeitos
-- Fotos de perfil e avaliações
-- Design de cards com efeitos visuais
-
-### 5. **Formulário de Contato**
-- Coleta de emails para marketing
-- Formulário responsivo com validação
-- Integração com JavaScript
-
-### 6. **Rodapé**
-- Informações de contato
-- Links para redes sociais
-- Política de privacidade
-
-## 🎯 Funcionalidades JavaScript
-
-- **Animações de Scroll** - Elementos aparecem conforme o usuário rola a página
-- **Efeitos de Partículas** - Partículas musicais flutuantes
-- **Player Simulado** - Simulação de reprodução de música
-- **Formulário Interativo** - Validação e feedback visual
-- **Efeitos de Hover** - Interações visuais nos elementos
-- **Scroll Suave** - Navegação fluida entre seções
-- **Efeito de Digitação** - Animação no título principal
-- **Efeitos Parallax** - Movimento de elementos com scroll
-
 ## 📱 Design Responsivo
 
 O projeto foi desenvolvido com foco em responsividade, utilizando:
@@ -91,27 +48,6 @@ O projeto foi desenvolvido com foco em responsividade, utilizando:
 - **Flexbox e Grid** para layouts adaptáveis
 - **Media queries** para diferentes tamanhos de tela
 - **Imagens responsivas** e elementos flexíveis
-
-## 🎨 Paleta de Cores
-
-- **Roxo:** `#a855f7` - Cor principal
-- **Rosa:** `#ec4899` - Cor secundária
-- **Azul:** `#3b82f6` - Cor de destaque
-- **Gradientes:** Combinações vibrantes para elementos especiais
-
-## 🚀 Como Executar
-
-1. Clone ou baixe o projeto
-2. Abra o arquivo `index.html` em um navegador web
-3. Ou use um servidor local para melhor experiência
-
-```bash
-# Usando Python (se disponível)
-python -m http.server 8000
-
-# Usando Node.js (se disponível)
-npx serve .
-```
 
 ## 📋 Recursos Implementados
 
@@ -132,11 +68,5 @@ npx serve .
 - Cursor musical personalizado
 - Partículas com tema musical
 
-## 📞 Contato
 
-Para dúvidas ou sugestões sobre o projeto, entre em contato através do formulário na landing page.
-
----
-
-**Desenvolvido com ❤️ para amantes da música**
 
